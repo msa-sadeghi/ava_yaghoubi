@@ -3,7 +3,11 @@
 # y = 1.1
 # print(type(y))
 
-# a = int(input("enter a number: "))
+# name = input("enter a name: ")
+# print(name)
+
+
+# a = int(input("enter a number: ")) 
 # b = 4
 
 # z = a + b
@@ -19,18 +23,18 @@
 # score += 1
 # print(score)
 
-# a = 4
-# b = 5
+a = 4
+b = 5
 
-# print(a == b)
-# print(a != b)
-# print(a > b)
-# print(a < b)
-# print(a >= b)
-# print(a <= b)
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
 # برنامه ای بنویس که دو عدد از ورودی دریافت کند و آن ها را با هم مقایسه نماید
 
-x = int(input("enter a number"))
-y = int(input("enter a number"))
+# x = int(input("enter a number"))
+# y = int(input("enter a number"))
 
-print("sum is", x + y)
+# print("sum is", x + y)
