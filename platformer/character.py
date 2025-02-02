@@ -28,6 +28,8 @@ class Character(Sprite):
         self.rect = self.image.get_rect(topleft=(x,y))
         self.last_image_change_time = pygame.time.get_ticks()
         self.flip = False
+        self.gravity = 0
+        self.in_air = False
             
     def draw(self, screen):
         self.animation()
@@ -45,6 +47,7 @@ class Character(Sprite):
                 
     def move(self, moving_left, moving_right):
         dx = 0
+        dy = 0
         if moving_left:
             self.flip = True
             dx -= 5
@@ -52,8 +55,14 @@ class Character(Sprite):
             dx += 5
             self.flip = False
         
-        
+        dy += self.gravity
+        self.gravity += 1
+        if self.rect.bottom + dy >= 300:
+            dy = 300 - self.rect.bottom
+            self.gravity = 0
+            self.in_air = False
         self.rect.x += dx
+        self.rect.y += dy
         
             
         
