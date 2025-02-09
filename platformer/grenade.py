@@ -14,9 +14,12 @@ class Grenade(Sprite):
     def update(self):
         dx = 0
         dy = 0
-        dx += self.xspeed
+        dx += self.direction * self.xspeed
         dy += self.yspeed
         self.yspeed += 1
-        
+        if self.rect.bottom + dy >= 300:
+            dy = 300 - self.rect.bottom
+            dx = 0
+            
         self.rect.x += dx
         self.rect.y += dy
