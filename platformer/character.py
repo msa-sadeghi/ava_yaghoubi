@@ -3,6 +3,7 @@ import pygame
 import os
 
 from bullet import Bullet
+from grenade import Grenade
 class Character(Sprite):
     def __init__(self, type_, x,y,ammo, grenades):
         super().__init__()
@@ -90,6 +91,15 @@ class Character(Sprite):
                     weapon_group
                     
                 )    
-        
+        if weapon_type == "grenade":
+            if self.grenades > 0 and pygame.time.get_ticks() - self.last_shoot_time > 100:
+                self.last_shoot_time = pygame.time.get_ticks()
+                self.grenades -=  1
+                Grenade(
+                    self.rect.centerx + self.direction * self.rect.size[0] * 0.6,
+                    self.rect.centery,
+                    weapon_group,
+                    self.direction
+                )
         
         
