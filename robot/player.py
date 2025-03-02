@@ -3,7 +3,7 @@ import pygame
 import os
 class Player(Sprite):
     def __init__(self, x,y):
-        super().__init()
+        super().__init__()
         self.animation_types = os.listdir("./png")
         self.all_images = {}
         for animation in self.animation_types:
