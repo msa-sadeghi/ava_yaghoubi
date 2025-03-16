@@ -15,6 +15,11 @@ while running == True:
             running = False
     if my_player.moving:
         my_player.change_animation("Run")
+    elif my_player.slide:
+        my_player.change_animation('Slide') 
+    elif my_player.jump:
+        my_player.change_animation('Jump') 
+
     else:
         my_player.change_animation("Idle")
     

@@ -22,6 +22,11 @@ class Player(Sprite):
         self.last_animation_time = pygame.time.get_ticks()
         self.flip = False
         self.moving = False
+        self.direction = 1
+        self.slide = False
+        self.jump = False
+        self.yspeed = 0
+
     def draw(self, screen):
         screen.blit(pygame.transform.flip(self.image, self.flip, False), self.rect)
         self.animation()
@@ -38,13 +43,32 @@ class Player(Sprite):
         dy = 0
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
+            self.direction = -1
             self.moving = True
             self.flip = True
             dx -= 5
         if keys[pygame.K_RIGHT]:
+            self.direction = 1
             self.moving = True
             self.flip = False
             dx += 5
+        
+        if not keys[pygame.K_LEFT] and not keys[pygame.K_RIGHT]:
+            self.moving = False
+        if keys[pygame.K_DOWN]:
+            self.slide = True
+            dx += self.direction * 10
+        if not keys[pygame.K_DOWN]:
+            self.slide = False
+        if keys[pygame.K_UP]:
+            self.jump = True
+            self.yspeed = -15
+        if not keys[pygame.K_UP]:
+            self.jump = False
+        
+        dy += self.yspeed
+        self.yspeed += 1
+
         self.rect.x += dx
         self.rect.y += dy
 
