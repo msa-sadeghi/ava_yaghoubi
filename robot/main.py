@@ -14,7 +14,9 @@ while running == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    if my_player.moving:
+    if my_player.moving and my_player.shooting:
+        my_player.change_animation("RunShoot")
+    elif my_player.moving:
         my_player.change_animation("Run")
     elif my_player.slide:
         my_player.change_animation('Slide') 

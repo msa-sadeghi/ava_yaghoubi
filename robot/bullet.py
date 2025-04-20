@@ -4,7 +4,9 @@ class Bullet(Sprite):
     def __init__(self, x, y, direction):
         super().__init__()
         self.all_images = [
-            pygame.image.load(f"./Objects/Bullet/Bullet_00{i}.png")
+            pygame.transform.scale_by(
+                pygame.image.load(f"./Objects/Bullet/Bullet_00{i}.png"), 0.3
+            )
             for i in range(5)
         ]
         self.image = self.all_images[0]
@@ -22,6 +24,7 @@ class Bullet(Sprite):
                 self.frame_index = 0
         self.rect.x += self.direction * self.speed
         self.image = self.all_images[self.frame_index]
+        self.image = pygame.transform.flip(self.image, self.direction == -1, False)
         
         # Remove the bullet if it goes off screen
         if self.rect.x < 0 or self.rect.x > 800:
