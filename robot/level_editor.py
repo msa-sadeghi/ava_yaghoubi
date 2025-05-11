@@ -40,11 +40,13 @@ for obj_img in object_images:
 COLS = 150
 ROWS = HEIGHT//50
 TILE_SIZE = 50
-
+current_tile = 0
 def draw_lines():
     for i in range(ROWS + 1):
         pygame.draw.line(screen, "darkgreen", (0, i * TILE_SIZE), (WIDTH, i * TILE_SIZE))
-    
+    for i in range(COLS + 1):
+        pygame.draw.line(screen, "darkgreen", (i * TILE_SIZE, 0), (i *TILE_SIZE, HEIGHT))
+
 screen = pygame.display.set_mode((WIDTH + SIDE_MARGIN, HEIGHT + LOWER_MARGIN))   
 pygame.display.set_caption("Level Editor")
 clock = pygame.time.Clock()
@@ -55,13 +57,15 @@ while running:
             running = False
 
     screen.fill("white")  
+    draw_lines()
     pygame.draw.rect(screen, "lightblue", (WIDTH, 0, SIDE_MARGIN,HEIGHT + LOWER_MARGIN))  
     pygame.draw.rect(screen, "lightblue", (0, HEIGHT,WIDTH +  SIDE_MARGIN, HEIGHT)) 
-    draw_lines()
-    for btn in tile_btns:
-        btn.update(screen)
+    for i,btn in enumerate(tile_btns):
+        if btn.update(screen):
+            current_tile =  i
 
 
+    pygame.draw.rect(screen, "red", tile_btns[current_tile].rect, 4)
     pygame.display.flip()  # Update the display
     clock.tick(FPS)  # Maintain the frame rate
 pygame.quit()  # Quit pygame
