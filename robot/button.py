@@ -1,13 +1,13 @@
 import pygame
 
 class Button:
-    def __init__(self, image, x,y):
+    def __init__(self, image, x,y,type):
        
         self.image = pygame.transform.scale_by(
             pygame.image.load(image), 0.2)
         self.rect = self.image.get_rect(
             topleft=(x,y))
-
+        self.type = type
 
     def update(self, screen):
         screen.blit(self.image, self.rect)
