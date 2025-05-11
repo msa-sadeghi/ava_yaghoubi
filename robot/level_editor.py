@@ -44,7 +44,7 @@ TILE_SIZE = 50
 def draw_lines():
     for i in range(ROWS + 1):
         pygame.draw.line(screen, "darkgreen", (0, i * TILE_SIZE), (WIDTH, i * TILE_SIZE))
-
+    
 screen = pygame.display.set_mode((WIDTH + SIDE_MARGIN, HEIGHT + LOWER_MARGIN))   
 pygame.display.set_caption("Level Editor")
 clock = pygame.time.Clock()
