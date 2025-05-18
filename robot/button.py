@@ -17,4 +17,4 @@ class Button:
             if pygame.mouse.get_pressed()[0]:
                 click = True
 
-        return click
+        return click, self.type
