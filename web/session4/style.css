@@ -1,0 +1,79 @@
+/* div.sample{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    border-radius: 15px;
+    position: relative;
+}
+div.child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    border-radius: 15px;
+}
+div.green{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+} */
+
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+}
+
+div.left{
+    background-color: red;
+    width: 50%;
+    height: 100vh;
+}
+.right{
+    background-color: green;
+    width: 50%;
+    height: 100vh;
+} */
+@font-face {
+    font-family: vazir-light;
+    src: url(../Vazirmatn-Light.woff2);
+}
+@font-face {
+    font-family: vazir-bold;
+    src: url(../Vazirmatn-Bold.woff2);
+}
+body{
+    direction: rtl;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 300px;
+    border: 2px solid brown;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+.card .card-header,.card-body{
+    font-family: vazir-bold;
+}
+.card .card-footer{
+    font-family: vazir-light;
+}
+.card .card-body img{
+    width: 100%;
+}
+
