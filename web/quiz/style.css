@@ -1,0 +1,35 @@
+/* .test{
+    width: 200px;
+    height: 200px;
+    background: #3F5EFB;
+    background: linear-gradient(90deg, red 0%, yellow 70%,blue 80%, green 100%);
+    box-shadow: 2px -1px 3px 4px green;;
+} */
+.container{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+div.one{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
+div.two{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    border-radius: 100%;
+}
