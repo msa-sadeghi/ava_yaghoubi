@@ -1,10 +1,9 @@
-div{
-    width: 100px;
-    height: 100px;
-    background-color: yellow;
-    transition:background-color 2s cubic-bezier(0.19, 1.06, 1, 1);
+.image-reponsive{
+    width: 100%;
 }
 
-div:hover{
-    background-color: red;
+div{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
 }
