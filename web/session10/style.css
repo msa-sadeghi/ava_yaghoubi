@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.container > label {
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 0 11px 6px 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.container > div{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    opacity: 0;
+}
+
+input#pro:checked ~ div.products{
+    opacity: 1;
+}
+input#pro:checked ~ div.members{
+    opacity: 0;
+}
+input#pro:checked ~ div.about{
+    opacity: 0;
+}
+
+input#team:checked ~ div.products{
+    opacity: 0;
+}
+input#team:checked ~ div.members{
+    opacity: 1;
+}
+input#team:checked ~ div.about{
+    opacity: 0;
+}
