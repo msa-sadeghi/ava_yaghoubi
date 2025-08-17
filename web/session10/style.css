@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .container{
     display: flex;
     gap: 10px;
@@ -11,15 +17,18 @@
     cursor: pointer;
 }
 
-input[type="checkbox"]{
+input[type="radio"]{
     display: none;
 }
 
 .container > div{
     position: absolute;
-    top: 80px;
-    left: 30px;
+    top: 60px;
+    left: 8px;
     opacity: 0;
+    background-color: gold;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 input#pro:checked ~ div.products{
@@ -40,4 +49,29 @@ input#team:checked ~ div.members{
 }
 input#team:checked ~ div.about{
     opacity: 0;
+}
+input#about:checked ~ div.products{
+    opacity: 0;
+}
+input#about:checked ~ div.members{
+    opacity: 0;
+}
+input#about:checked ~ div.about{
+    opacity: 1;
+}
+ul{
+    list-style: none;
+    width: 100%;
+}
+
+ul li{
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 2px solid red;
+}
+div.members{
+    left: 100px;
+}
+div.about{
+    left: 250px;
 }
