@@ -1,0 +1,14 @@
+@font-face {
+    font-family: vazir;
+    src: url(../Vazirmatn-Light.woff2);
+}
+header .right{
+    display: flex;
+    gap: 20px;
+}
+body{
+    font-family: vazir;
+}
+header .right nav a{
+    margin-left: 15px;
+}
