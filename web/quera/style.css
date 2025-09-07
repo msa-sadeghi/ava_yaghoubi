@@ -10,6 +10,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    height: 50px;
 }
 header .right, header .left{
     display: flex;
@@ -19,7 +20,7 @@ header .right, header .left{
 
 header .right{
     justify-content: flex-start;
-    width: 70%;
+
 
 }
 body{
@@ -31,24 +32,49 @@ header .right nav a{
 }
 header .right img{
     max-width: 108px;
-    height: auto;
+    height: 100%;
 }
 
 input#c, label[for="c"]{
     display: none;
 }
 
-
+i.fa-bars{
+    font-size: 22px;
+}
 
 @media screen and (max-width:600px){
     label[for="c"]{
         display: block;
+        cursor: pointer;
     }
     .right nav{
         display: none;
+        background-color: #efefef;
+        
     }
-    header .right{
+    .right img{
+        margin-right: 130px;
+    }
+    /* header .right{
     width: 60%;
     justify-content: space-between;
+    position: relative;
+    } */
+
+    input#c:checked ~ nav{
+        display: block;
+        position: absolute;
+        top: 8%;
+        left: 0;
+        width: 100%;
+        
+    }
+    input#c:checked ~ nav a{
+        display: block;
+        padding: 7px;
+    }
+    input#c:checked ~ nav a:hover{
+        background-color: #c2bdbd;
     }
 }
