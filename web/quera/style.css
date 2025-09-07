@@ -2,7 +2,7 @@
     font-family: vazir;
     src: url(../Vazirmatn-Light.woff2);
 }
-*{
+*,body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
