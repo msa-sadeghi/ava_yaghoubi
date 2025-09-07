@@ -33,3 +33,22 @@ header .right img{
     max-width: 108px;
     height: auto;
 }
+
+input#c, label[for="c"]{
+    display: none;
+}
+
+
+
+@media screen and (max-width:600px){
+    label[for="c"]{
+        display: block;
+    }
+    .right nav{
+        display: none;
+    }
+    header .right{
+    width: 60%;
+    justify-content: space-between;
+    }
+}
