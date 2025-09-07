@@ -2,6 +2,11 @@
     font-family: vazir;
     src: url(../Vazirmatn-Light.woff2);
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     width: 100%;
 }
@@ -44,6 +49,9 @@ i.fa-bars{
 }
 
 @media screen and (max-width:600px){
+    body{
+        overflow: hidden;
+    }
     label[for="c"]{
         display: block;
         cursor: pointer;
@@ -53,21 +61,19 @@ i.fa-bars{
         background-color: #efefef;
         
     }
-    .right img{
-        margin-right: 130px;
-    }
-    /* header .right{
+    header .right{
     width: 60%;
     justify-content: space-between;
     position: relative;
-    } */
+   
+    }
 
     input#c:checked ~ nav{
         display: block;
         position: absolute;
-        top: 8%;
-        left: 0;
-        width: 100%;
+        top: 100%;
+        right: 0;
+        width: 100vw;
         
     }
     input#c:checked ~ nav a{
