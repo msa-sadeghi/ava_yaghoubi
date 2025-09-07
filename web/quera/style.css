@@ -4,6 +4,10 @@
 }
 header{
     display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px;
 }
 header .right, header .left{
     display: flex;
@@ -14,4 +18,8 @@ body{
 }
 header .right nav a{
     margin-left: 15px;
+}
+header .right img{
+    max-width: 108px;
+    height: auto;
 }
