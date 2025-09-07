@@ -2,21 +2,31 @@
     font-family: vazir;
     src: url(../Vazirmatn-Light.woff2);
 }
-header{
-    display: flex;
-    height: auto;
+body{
     width: 100%;
+}
+header{
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
 }
 header .right, header .left{
     display: flex;
     gap: 20px;
+    height: 100%;
+}
+
+header .right{
+    justify-content: flex-start;
+    width: 70%;
+
 }
 body{
     font-family: vazir;
 }
 header .right nav a{
+    
     margin-left: 15px;
 }
 header .right img{
