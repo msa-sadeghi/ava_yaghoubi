@@ -14,6 +14,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     height: 50px;
 }
@@ -25,6 +26,7 @@ header .right, header .left{
 
 header .right{
     justify-content: flex-start;
+    position: relative;
 
 
 }
@@ -36,8 +38,9 @@ header .right nav a{
     margin-left: 15px;
 }
 header .right img{
+    align-self: flex-start;
     max-width: 108px;
-    height: 100%;
+    height: auto;
 }
 
 input#c, label[for="c"]{
@@ -50,7 +53,7 @@ i.fa-bars{
 
 @media screen and (max-width:600px){
     body{
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     label[for="c"]{
         display: block;
