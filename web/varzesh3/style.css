@@ -1,0 +1,59 @@
+@font-face {
+    font-family: iranSans;
+    src: url(../iransansweb.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #efefef;
+    font-family: iranSans;
+}
+nav, header .container{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+}
+header{
+    background-color: #00838f;
+}
+header .container{
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 10px;
+    
+    
+}
+
+header a{
+    color: white;
+}
+nav img{
+    height: 100%;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container-fluid{
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
